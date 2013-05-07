@@ -63,6 +63,7 @@ libuuid1                                        install
 login                                           install
 logrotate                                       install
 lsb-base                                        install
+lvm2                                            install
 mawk                                            install
 mount                                           install
 nano                                            install
