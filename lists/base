@@ -22,6 +22,7 @@ gcc-4.4-base                                    install
 gnupg                                           install
 gpgv                                            install
 grep                                            install
+gzip                                            install
 hostname                                        install
 ifupdown                                        install
 inetutils-syslogd                               install
