@@ -10,7 +10,6 @@ coreutils                                       install
 cron                                            install
 dash                                            install
 debconf                                         install
-debconf-english                                 install
 debian-archive-keyring                          install
 debianutils                                     install
 diffutils                                       install
@@ -18,7 +17,7 @@ dpkg                                            install
 e2fslibs                                        install
 e2fsprogs                                       install
 findutils                                       install
-gcc-4.4-base                                    install
+gcc-4.8-base                                    install
 gnupg                                           install
 gpgv                                            install
 grep                                            install
@@ -39,9 +38,9 @@ libbz2-1.0                                      install
 libc6                                           install
 libc-bin                                        install
 libcomerr2                                      install
-libdb4.8                                        install
+libdb5.1                                        install
 libgcc1                                         install
-liblzma2                                        install
+liblzma5                                        install
 libncurses5                                     install
 libncursesw5                                    install
 libnewt0.52                                     install
@@ -55,7 +54,7 @@ libselinux1                                     install
 libsepol1                                       install
 libslang2                                       install
 libss2                                          install
-libssl0.9.8                                     install
+libssl1.0.0                                     install
 libstdc++6                                      install
 libudev0                                        install
 libusb-0.1-4                                    install
