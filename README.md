@@ -9,8 +9,8 @@ Compatibility
 
 **Operating Systems:**
 
- + Debian 6 (Squeeze) i686
- + Debian 6 (Squeeze) x86_64
+ + Debian 7 (wheezy) i686
+ + Debian 7 (wheezy) x86_64
 
 **Platforms:**
 
