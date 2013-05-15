@@ -64,7 +64,6 @@ locales                                         install
 login                                           install
 logrotate                                       install
 lsb-base                                        install
-lvm2                                            install
 mawk                                            install
 mount                                           install
 nano                                            install
@@ -73,12 +72,10 @@ ncurses-bin                                     install
 net-tools                                       install
 netbase                                         install
 passwd                                          install
-pbzcat                                          install
 pbzip2                                          install
 perl-base                                       install
 pigz                                            install
 procps                                          install
-pxz                                             install
 readline-common                                 install
 sed                                             install
 sensible-utils                                  install
