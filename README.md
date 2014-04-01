@@ -4,7 +4,7 @@ Notes
  + Run on a freshly installed server under root!
  + Make sure you don't rely on sudo, you'll get locked out as it will be wiped during the cleaning process!
  + So make the following changes first
-		`# vipw`
+		`# sudo vipw`
 		change line
 		`root:x:0:0:root:/root:/bin/bash`
 		to
