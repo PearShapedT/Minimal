@@ -52,6 +52,7 @@ libpopt0                                        install
 libreadline6                                    install
 libselinux1                                     install
 libsepol1                                       install
+libsigsegv2                                     install
 libslang2                                       install
 libss2                                          install
 libssl1.0.0                                     install
@@ -71,10 +72,15 @@ ncurses-bin                                     install
 net-tools                                       install
 netbase                                         install
 passwd                                          install
-pbzip2                                          install
 perl-base                                       install
-pigz                                            install
+pistore                                         install
 procps                                          install
+raspberrypi-artwork                             install
+raspberrypi-bootloader                          install
+raspbian-archive-keyring                        install
+raspi-config                                    install
+raspi-copies-and-fills                          install
+rpi-update   		                    						install
 readline-common                                 install
 sed                                             install
 sensible-utils                                  install
