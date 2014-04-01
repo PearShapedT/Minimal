@@ -80,7 +80,7 @@ raspberrypi-bootloader                          install
 raspbian-archive-keyring                        install
 raspi-config                                    install
 raspi-copies-and-fills                          install
-rpi-update   		                    						install
+rpi-update                                      install
 readline-common                                 install
 sed                                             install
 sensible-utils                                  install
