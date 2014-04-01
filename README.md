@@ -9,24 +9,18 @@ Compatibility
 
 **Operating Systems:**
 
- + Debian 7 (wheezy) i686
- + Debian 7 (wheezy) x86_64
+ + Raspbian 7 (wheezy) rpi
 
 **Platforms:**
 
- + KVM
- + OpenVZ
- + Physical Hardware
- + Virtualbox
- + VMware
- + Xen HVM
+ + RaspberryPi
 
 Download
 ========
 
 Download the script with the following command:
 
-	cd ~; wget --no-check-certificate -O minimal.tar.gz http://www.github.com/maxexcloo/Minimal/tarball/master; tar zxvf minimal.tar.gz; cd *Minimal*
+	cd ~; wget --no-check-certificate -O minimal.tar.gz http://www.github.com/PearShapedT/Minimal/tarball/master; tar zxvf minimal.tar.gz; cd *Minimal*
 
 Instructions
 ============
@@ -45,3 +39,21 @@ Credits
  + DPKG Cleaning: http://www.coredump.gr/linux/debian-package-list-backup-and-restore/
  + miTgiB @ daIRC: Script Help
  + SSH Limiting: http://www.hostingfu.com/article/ssh-dictionary-attack-prevention-with-iptables/
+
+Items added by extra
+--------------------
+axel
+bwm-ng
+curl
+htop
+ntp
+p7zip-full
+psmisc
+python
+rar
+rsnapshot
+rsync
+screen
+unrar
+unzip
+zip
