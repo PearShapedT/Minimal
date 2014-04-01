@@ -3,6 +3,13 @@ Notes
 
  + Run on a freshly installed server under root!
  + Make sure you don't rely on sudo, you'll get locked out as it will be wiped during the cleaning process!
+ + So make the following changes first
+		`# vipw`
+		change line
+		`root:x:0:0:root:/root:/bin/bash`
+		to
+		`root::0:0:root:/root:/bin/bash`
+		after this change reboot Raspberry Pi and after boot,enter root as username,press enter and you will have root access.After this change root password and you can now login directly as root.
 
 Compatibility
 =============
