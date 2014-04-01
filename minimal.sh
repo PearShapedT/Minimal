@@ -195,10 +195,12 @@ function install_dropbear {
 	apt-get install dropbear
 	# Update Configuration Files
 	cp settings/dropbear /etc/default/dropbear
-	# Install OpenSSH For SFTP Support
-	install_ssh
-	# Remove OpenSSH Daemon
-	update-rc.d -f ssh remove
+	if [[ "$1" == "" ]]; then
+		# Install OpenSSH For SFTP Support
+		install_ssh
+		# Remove OpenSSH Daemon
+		update-rc.d -f ssh remove
+	fi
 	# Clean Package List
 	packages_purge
 }
@@ -232,6 +234,16 @@ function install_ssh {
 ## Package Functions ##
 #######################
 
+
+# return 0 if program version is equal or greater than check version
+function check_version {
+    local version=$1 check=$2
+    local winner=$(echo -e "$version\n$check" | sed '/^$/d' | sort -nr | head -1)
+    [[ "$winner" = "$version" ]] && return 0
+    return 1
+}    
+
+
 # Use DPKG To Remove Packages
 function packages_clean {
 	echo \>\> Cleaning Packages
@@ -261,29 +273,11 @@ function packages_create {
 	else
 		# Copy Base Package List
 		cat lists/base-hw >> lists/temp
-		# Detect x86
-		if [ $(uname -m) == "i686" ]; then
-			echo Detected i686!
+		# Detect rpi
+		if [ $(uname -m) == "armv6l" ]; then
+			echo Detected RPi!
 			# Append Platform Relevent Packages To Package List
-			cat lists/kernel-i686 >> lists/temp
-		fi
-		# Detect x86_64
-		if [ $(uname -m) == "x86_64" ]; then
-			echo Detected x86_64!
-			# Append Platform Relevent Packages To Package List
-			cat lists/kernel-x86_64 >> lists/temp
-		fi
-		# Detect XEN PV x86
-		if [[ $(uname -r) == *xen* ]] && [ $(uname -m) == "i686" ]; then
-			echo Detected XEN PV i686!
-			# Append Platform Relevent Packages To Package List
-			cat lists/kernel-xen-i686 >> lists/temp
-		fi
-		# Detect XEN PV x86_64
-		if [[ $(uname -r) == *xen* ]] && [ $(uname -m) == "x86_64" ]; then
-			echo Detected XEN PV x86_64!
-			# Append Platform Relevent Packages To Package List
-			cat lists/kernel-xen-x86_64 >> lists/temp
+			cat lists/kernel-rpi >> lists/temp
 		fi
 	fi
 	# Sort Package List
@@ -304,7 +298,7 @@ function packages_update {
 	echo \>\> Setting Up APT Sources
 	# Copy Sources
 	cp settings/sources /etc/apt/sources.list
-	# Add DotDeb Source Key
+	# Add DotDeb Source Key (useless now?)
 	wget http://www.dotdeb.org/dotdeb.gpg -qO - | apt-key add -
 	# Update Package Lists
 	apt-get update
@@ -342,3 +336,4 @@ case "$1" in
 		echo To set the clock, clean files and create a user: bash minimal.sh configure
 	;;
 esac
+
